@@ -8,14 +8,16 @@
   <title>{{ site.title }}</title>
 	<meta name="keywords" content="{{ site.keywords }}">
 	<meta name="description" content="{{ site.description }}">
-  <link rel="stylesheet" href="combo.css">
+  <link rel="stylesheet" href="https://www.americansolarchallenge.org/ASC/wp-content/themes/astra-external-html-child/assets/css/fsgp-2025-combo.css?ver=20250605">
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
   {% if site.favicon %}<link rel="shortcut icon" href="{{ site.favicon }}" type="image/x-icon">{% endif %}
 	{% if site.touch_icon %}<link rel="apple-touch-icon" href="{{ site.touch_icon }}">{% endif %}
 </head>
-<body>
-  <div id="main">
+<body style="width: 980px; margin: auto">
+<div id="jekyll-site-wrapper">
+   <div id="header-img">
+   <img src="https://www.americansolarchallenge.org/ASC/wp-content/uploads/2025/06/2025-montreal-header.jpg" alt="Header Image for Electrek FSGP featuring 2024 champion Poly Montreal">
 
     <nav><ul>
       {% for node in site.posts reversed %}
