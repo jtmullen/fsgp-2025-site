@@ -10,7 +10,7 @@
 	<meta name="description" content="{{ site.description }}">
   <link rel="stylesheet" href="https://www.americansolarchallenge.org/ASC/wp-content/themes/astra-external-html-child/assets/css/fsgp-2025-combo.css?ver=20250605">
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   {% if site.favicon %}<link rel="shortcut icon" href="{{ site.favicon }}" type="image/x-icon">{% endif %}
 	{% if site.touch_icon %}<link rel="apple-touch-icon" href="{{ site.touch_icon }}">{% endif %}
 </head>
@@ -18,7 +18,7 @@
 <div id="jekyll-site-wrapper">
    <div id="header-img">
    <img src="https://www.americansolarchallenge.org/ASC/wp-content/uploads/2025/06/2025-montreal-header.jpg" alt="Header Image for Electrek FSGP featuring 2024 champion Poly Montreal">
-
+   </div>
     <nav><ul>
       {% for node in site.posts reversed %}
         {% capture id %}{{ node.id | remove:'/' | downcase }}{% endcapture %}
@@ -51,15 +51,13 @@
     {% endfor %}
 
 
-    <div id="footer" class="section text-white">
+    <div id="footer" class="section">
       <div class="container">
         {% capture foottext %} {% include footer.md %} {% endcapture %}
         {{ foottext | markdownify }}
       </div>
     </div>
   </div>
-
-{% include analytics.html %}
 </body>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="site.js"></script>
