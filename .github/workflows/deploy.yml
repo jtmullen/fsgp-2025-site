@@ -53,7 +53,7 @@ jobs:
                 cache: 'pip'
 
           - name: Upload
-            run: python ./upload_jekyll_site.py
+            run: python3 ./upload_jekyll_site.py
             env:
               WP_URL: "https://www.americansolarchallenge.org"
               WP_USERNAME: ${{ secrets.WORDPRESS_USERNAME }}
