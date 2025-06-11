@@ -47,7 +47,7 @@ Keep up with the action from home! We will post regular updates on our social me
     </a>
 </div>
 
-Courtesy of NCM Motorsports Park, two livestreams of the track are available during the event:
+Courtesy of NCM Motorsports Park, two livestreams of the track are available during the event, these are available 7:30a to 5:30p daily:
 <div class="responsive-grid">
     <div class="responsive-column">
       <p><b>North View Livestream</b></p>
@@ -58,3 +58,4 @@ Courtesy of NCM Motorsports Park, two livestreams of the track are available dur
 <iframe style="height: 100%; top: 0px; width: 100%; left: 0px; opacity: 1; visibility: visible;" src="https://console.rhombussystems.com/share/live/qfulbFnXRlW5nXeV8QArFw" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
     </div>
   </div>
+<br><br><br>
