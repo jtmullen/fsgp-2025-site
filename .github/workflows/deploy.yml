@@ -51,11 +51,7 @@ jobs:
             with: 
                 python-version: '3.x'
                 cache: 'pip'
-                
-          - name: Install Python Dependencies
-            run: |
-                pip install requests beautifulsoup4
-                
+
           - name: Upload
             run: python ./upload_jekyll_content.py
             env:
