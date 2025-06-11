@@ -2,6 +2,7 @@ import os
 import requests
 from bs4 import BeautifulSoup
 import json
+import base64 # Import the base64 module
 
 def extract_html_content(html_file_path, target_div_id):
     """
@@ -16,7 +17,6 @@ def extract_html_content(html_file_path, target_div_id):
 
         if target_div:
             # Extract everything inside the div, then convert to string
-            # We want the *inner* HTML, so .contents or .children then join, or .decode_contents()
             extracted_html = ''.join(str(c) for c in target_div.contents)
             return extracted_html
         else:
@@ -33,13 +33,16 @@ def upload_to_wordpress(wp_url, wp_username, wp_app_password, page_id, acf_field
     api_url = f"{wp_url}/wp-json/wp/v2/pages/{page_id}"
     
     # Authentication header for Application Passwords
+    # Corrected: Using base64.b64encode
+    auth_string = f"{wp_username}:{wp_app_password}".encode('utf-8')
+    encoded_auth = base64.b64encode(auth_string).decode('utf-8')
+
     headers = {
         "Content-Type": "application/json",
-        "Authorization": f"Basic {requests.utils.to_native_string(requests.utils.b64encode(f'{wp_username}:{wp_app_password}'.encode('utf-8')))}"
+        "Authorization": f"Basic {encoded_auth}"
     }
 
     # Data payload for updating the ACF field
-    # The 'acf' key is crucial for ACF REST API integration
     data = {
         "acf": {
             acf_field_name: html_content
