@@ -16,8 +16,7 @@ def extract_html_content(html_file_path, target_div_id):
         target_div = soup.find('div', id=target_div_id)
 
         if target_div:
-            # Extract everything inside the div, then convert to string
-            extracted_html = ''.join(str(c) for c in target_div.contents)
+            extracted_html = str(target_div)
             return extracted_html
         else:
             print(f"Error: Div with ID '{target_div_id}' not found in {html_file_path}")
