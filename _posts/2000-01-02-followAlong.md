@@ -29,7 +29,8 @@ _Spectators may be required to sign a waiver upon arrival to NCM Motorsports Par
 
 ## _From Home_
 
-Keep up with the action from home! We will post regular updates on our social media platforms as well as livestream many parts of the event on our YouTube channel! 
+Keep up with the action from home! We will post regular updates on our social media platforms as well as livestream many parts of the event on our YouTube channel! Courtesy of NCM Motorsports Park, two live views of the track are available during the event, these are available 7:30a to 5:30p daily:
+
 
 
 <div class="social-icons-grid">
@@ -46,15 +47,13 @@ Keep up with the action from home! We will post regular updates on our social me
         <i class="fab fa-youtube"></i>
     </a>
 </div>
-
-Courtesy of NCM Motorsports Park, two livestreams of the track are available during the event, these are available 7:30a to 5:30p daily:
 <div class="responsive-grid">
     <div class="responsive-column">
-      <p><b>North View Livestream</b></p>
+      <p><b>North View Live Track</b></p>
 <iframe style="height: 100%; top: 0px; width: 100%; left: 0px; opacity: 1; visibility: visible;" src="https://console.rhombussystems.com/share/live/KYwr7VG7Rxmzyx9sXN2s9Q" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
     </div>
     <div class="responsive-column">
-      <p><b>South View Livestream</b></p>
+      <p><b>South View Live Track</b></p>
 <iframe style="height: 100%; top: 0px; width: 100%; left: 0px; opacity: 1; visibility: visible;" src="https://console.rhombussystems.com/share/live/qfulbFnXRlW5nXeV8QArFw" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
     </div>
   </div>
