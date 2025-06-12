@@ -27,10 +27,11 @@ Spectators are invited to attend Electrek FSGP 2025 for free! Come see the solar
   </div>
 _Spectators may be required to sign a waiver upon arrival to NCM Motorsports Park._
 
+<hr>
+
 ## _From Home_
 
-Keep up with the action from home! We will post regular updates on our social media platforms as well as livestream many parts of the event on our YouTube channel! Courtesy of NCM Motorsports Park, two live views of the track are available during the event, these are available 7:30a to 5:30p daily:
-
+Keep up with the action from home! We will post regular updates on our social media platforms as well as livestream many parts of the event on our YouTube channel! 
 
 
 <div class="social-icons-grid">
@@ -48,6 +49,7 @@ Keep up with the action from home! We will post regular updates on our social me
     </a>
 </div>
 <div class="responsive-grid">
+Courtesy of NCM Motorsports Park, two live views of the track are available during the event, these are available 7:30a to 5:30p daily:
     <div class="responsive-column">
       <p><b>North View Live Track</b></p>
 <iframe style="height: 100%; top: 0px; width: 100%; left: 0px; opacity: 1; visibility: visible;" src="https://console.rhombussystems.com/share/live/KYwr7VG7Rxmzyx9sXN2s9Q" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
