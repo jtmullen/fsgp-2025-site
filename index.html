@@ -13,13 +13,21 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   {% if site.favicon %}<link rel="shortcut icon" href="{{ site.favicon }}" type="image/x-icon">{% endif %}
 	{% if site.touch_icon %}<link rel="apple-touch-icon" href="{{ site.touch_icon }}">{% endif %}
+<style>
+/* Class for the sticky state */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+</style>
 </head>
 <body style="width: 980px; margin: auto">
 <div id="jekyll-site-wrapper">
    <div id="header-img">
    <img src="https://www.americansolarchallenge.org/ASC/wp-content/uploads/2025/06/2025-montreal-header.jpg" alt="Header Image for Electrek FSGP featuring 2024 champion Poly Montreal">
    </div>
-    <nav><ul>
+    <nav id="fsgp-nav-bar"><ul>
       {% for node in site.posts reversed %}
         {% capture id %}{{ node.id | remove:'/' | downcase }}{% endcapture %}
         <li class="p-{{id}}"><a href="#{{id}}">{{node.title}}</a></li>
@@ -61,4 +69,23 @@
 </body>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="site.js"></script>
+<script>
+
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("fsgp-nav-bar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// When the user scrolls the page, execute myFunction
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
 </html>
