@@ -7,7 +7,7 @@ title: "Scrutineering"
 
 
 Before they can get on the track, teams and their solar cars undergo several days of scrutiny from the event's technical staff. All teams will go through the same 11 stations prior to being cleared for the track.
-<table style="font-size:15px; padding:10px" id="scrutineering">
+<table style="font-size:15px;margin:auto;width:95%" id="scrutineering">
 <tbody>
   <tr style="background-color:#f2f2f2;">
     <td style="padding: 8px; text-align: right; white-space: nowrap;"><b>Safety</b></td>
