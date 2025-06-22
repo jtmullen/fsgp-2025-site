@@ -14,12 +14,36 @@
   {% if site.favicon %}<link rel="shortcut icon" href="{{ site.favicon }}" type="image/x-icon">{% endif %}
 	{% if site.touch_icon %}<link rel="apple-touch-icon" href="{{ site.touch_icon }}">{% endif %}
 <style>
-/* Class for the sticky state */
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
+#scrutineering-table {
+  height: 700px;
+  padding-right: 10px !important;
+  padding-left: 10px !important;
+  max-width: 900px;
+  margin: 0 auto !important;
+  justify-content: flex-end;
+  white-space: nowrap;
+  --heading-size: 2.5rem;
+  --color-1: rgba(75, 168, 60, 0.8);
+  --color-2: rgba(0, 0, 255, 0.8);
+  --color-3: rgba(255, 255, 0, 0.8);
+  --color-4: rgba(255, 0, 0, 0.8);
+  --color-5: rgba(0,0,0,0.05);
+  --color-6: rgba(125,  125, 125, 0.8);
+  --labels-size: 120px;
+  --labels-align: flex-end;
 }
+
+@media (max-width: 479px) {
+    #scrutineering-table {
+        height: 750px;
+		padding-left: 30px;
+    }
+}
+
+#scrutineering-table caption {
+  font-weight: bold;
+}
+
 </style>
 </head>
 <body style="width: 980px; margin: auto">
