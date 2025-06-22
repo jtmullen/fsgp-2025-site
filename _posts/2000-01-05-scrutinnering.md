@@ -1,6 +1,6 @@
 ---
 title: "Scrutineering"
-
+stations: 11
 ---
 
 # Scrutineering
@@ -55,3 +55,33 @@ Before they can get on the track, teams and their solar cars undergo several day
   </tr>
 </tbody>
 </table>
+<br>
+{% include scrutineering %}
+
+<div style="font-family: Arial, sans-serif; max-width: 550px; margin: 20px auto; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+  <div style="background-color: #f0f0f0; padding: 12px; text-align: center; border-bottom: 1px solid #ddd; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+    <h3 style="margin: 0; color: #333; font-size: 1.3em;">Scrutineering Status Definitions</h3>
+  </div>
+  <div style="padding: 15px;">
+    <div style="display: flex; align-items: center; margin-bottom: 10px;">
+      <div style="width: 25px; height: 25px; background-color: #4B8A3C; border-radius: 4px; flex-shrink: 0; margin-right: 12px;"></div>
+      <p style="margin: 0; font-size: 1em; color: #333; white-space: nowrap;"><b>GREEN</b>: Team has passed station</p>
+    </div>
+    <div style="display: flex; align-items: center; margin-bottom: 10px;">
+      <div style="width: 25px; height: 25px; background-color: #0000FF; border-radius: 4px; flex-shrink: 0; margin-right: 12px;"></div>
+      <p style="margin: 0; font-size: 1em; color: #333; white-space: nowrap;"><b>BLUE</b>: Improvement Needed / Cleared for Track</p>
+    </div>
+    <div style="display: flex; align-items: center; margin-bottom: 10px;">
+      <div style="width: 25px; height: 25px; background-color: #FFFF00; border-radius: 4px; flex-shrink: 0; margin-right: 12px;"></div>
+      <p style="margin: 0; font-size: 1em; color: #333; white-space: nowrap;"><b>YELLOW</b>: Improvement needed / Cleared for Dynamics</p>
+    </div>
+    <div style="display: flex; align-items: center; margin-bottom: 10px;">
+      <div style="width: 25px; height: 25px; background-color: #FF0000; border-radius: 4px; flex-shrink: 0; margin-right: 12px;"></div>
+      <p style="margin: 0; font-size: 1em; color: #333; white-space: nowrap;"><b>RED</b>: FAIL / Safety Issue Must be Addressed</p>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <div style="width: 25px; height: 25px; background-color: rgba(0,0,0,0.08); border-radius: 4px; flex-shrink: 0; margin-right: 12px; border: 1px dashed #bbb;"></div>
+      <p style="margin: 0; font-size: 1em; color: #555; font-style: italic; white-space: nowrap;">Transparent spaces are not yet attempted</p>
+    </div>
+  </div>
+</div>
