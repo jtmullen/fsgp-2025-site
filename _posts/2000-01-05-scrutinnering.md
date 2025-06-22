@@ -58,7 +58,7 @@ Before they can get on the track, teams and their solar cars undergo several day
 <br>
 {% include scrutineering %}
 
-<div class="scrutineering-status-container">
+<div class="scrutineering-status-container" style="max-width: 550px !important;margin: auto;border: 1px">
   <div class="scrutineering-status-header">
     <h3>Scrutineering Status Definitions</h3>
   </div>
