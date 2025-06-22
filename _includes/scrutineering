@@ -8,7 +8,7 @@ Scrutineering Status Generator
 		{%- assign table_height = table_height | plus:40 -%}
 	{%- endif -%}
 {%- endfor -%}
-<link rel='stylesheet' href='https://americansolarchallenge.org/2024/assets/css/charts.min.css'><table id="scrutineering-table" class="charts-css bar show-data show-heading show-labels show-primary-axis show-4-secondary-axes data-spacing-5 multiple stacked" style="height: {{table_height | at_least: 100}}px;"><caption><i>Hover/Tap on a color for details</i></caption>
+<link rel='stylesheet' href='https://americansolarchallenge.org/2024/assets/css/charts.min.css'><table id="scrutineering-table" class="charts-css bar show-data show-heading show-labels show-primary-axis show-4-secondary-axes data-spacing-5 multiple stacked scrutineering-table" style="height: {{table_height | at_least: 100}}px;"><caption><i>Hover/Tap on a color for details</i></caption>
   <thead>
     <tr>
       <th scope="col"> Team Name </th>
