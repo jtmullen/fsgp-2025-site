@@ -68,12 +68,12 @@ Scrutineering Status Generator
 				{%- assign ttwhite = ttwhite | push:tooltips[forloop.index0] -%}
 			{%- endif -%}
 		{%- endfor -%}
-		<td style="--size: calc({{greens}} / {{ page.stations }});"><span class="data" style="position: relative; left: calc(-100% + 9rem)"> {%- assign order = team.order | plus:0 -%}{%- if order > 0 -%}<b>Start Position: {{team.order}}</b>{%- if order < 10 -%}&nbsp;&nbsp;&nbsp;{%- endif -%}{%- endif -%} </span><span class="tooltip" style="padding:2px;line-height: normal;">{%- for title in ttgreen -%} {{title}}<br>{%- endfor -%}</span></td>
-		<td style="--size: calc({{blues}} / {{ page.stations }});"><span class="data"> </span><span class="tooltip" style="padding:2px;line-height: normal;">{%- for title in ttblue -%} {{title}}<br>{%- endfor -%}</span></td>
-		<td style="--size: calc({{yellows}} / {{ page.stations }});"><span class="data"> </span><span class="tooltip" style="padding:2px;line-height: normal;">{%- for title in ttyellow -%} {{title}}<br>{%- endfor -%}</span></td>
-		<td style="--size: calc({{reds}} / {{ page.stations }});"><span class="data"> </span><span class="tooltip" style="padding:2px;line-height: normal;">{%- for title in ttred -%} {{title}}<br>{%- endfor -%}</span></td>
-		<td style="--size: calc({{whites}} / {{ page.stations }});"><span class="data"> </span><span class="tooltip" style="padding:2px;line-height: normal;">{%- for title in ttwhite -%} {{title}}<br>{%- endfor -%}</span></td>
-		<td style="--size: calc({{greys}} / {{ page.stations }});"><span class="data"> </span><span class="tooltip" style="padding:2px;line-height: normal;">{%- for title in ttgrey -%} {{title}}<br>{%- endfor -%}</span></td>
+		<td style="--size: calc({{greens}} / {{ page.stations }});"><span class="data" style="position: relative; left: calc(-100% + 9rem)"> {%- assign order = team.order | plus:0 -%}{%- if order > 0 -%}<b>Start Position: {{team.order}}</b>{%- if order < 10 -%}&nbsp;&nbsp;&nbsp;{%- endif -%}{%- endif -%} </span><span class="tooltip" style="padding:5px 10px;line-height: normal;">{%- for title in ttgreen -%} {{title}}<br>{%- endfor -%}</span></td>
+		<td style="--size: calc({{blues}} / {{ page.stations }});"><span class="data"> </span><span class="tooltip" style="padding:5px 10px;line-height: normal;">{%- for title in ttblue -%} {{title}}<br>{%- endfor -%}</span></td>
+		<td style="--size: calc({{yellows}} / {{ page.stations }});"><span class="data"> </span><span class="tooltip" style="padding:5px 10px;line-height: normal;">{%- for title in ttyellow -%} {{title}}<br>{%- endfor -%}</span></td>
+		<td style="--size: calc({{reds}} / {{ page.stations }});"><span class="data"> </span><span class="tooltip" style="padding:5px 10px;line-height: normal;">{%- for title in ttred -%} {{title}}<br>{%- endfor -%}</span></td>
+		<td style="--size: calc({{whites}} / {{ page.stations }});"><span class="data"> </span><span class="tooltip" style="padding:5px 10px;line-height: normal;">{%- for title in ttwhite -%} {{title}}<br>{%- endfor -%}</span></td>
+		<td style="--size: calc({{greys}} / {{ page.stations }});"><span class="data"> </span><span class="tooltip" style="padding:5px 10px;line-height: normal;">{%- for title in ttgrey -%} {{title}}<br>{%- endfor -%}</span></td>
 		</tr>
 	{%- endif -%}
   {%- endfor -%}
