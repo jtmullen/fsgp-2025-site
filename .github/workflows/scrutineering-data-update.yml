@@ -1,0 +1,38 @@
+name: Update Scrutineering Status
+
+on: 
+  repository_dispatch:
+    types: [scrutineering_results]
+        
+
+jobs:
+  scrutineering-update:
+      runs-on: ubuntu-latest
+      permissions:
+          contents: write
+      timeout-minutes: 5
+      steps:
+          - name: Log Info
+            run: |
+              echo "Time: ${{ github.event.client_payload.time }}"
+              echo "Scrutineering Data: ${{ github.event.client_payload.data }}"
+          - uses: actions/checkout@v4
+            name: Checkout Repo
+          - name: Generate New Scrutineering CSV File
+            run: |
+              cd $GITHUB_WORKSPACE
+              cd _data
+              echo -n $'${{ github.event.client_payload.data }}' > scrutineering.csv
+          - name: Push to Git
+            run: |
+              git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+              git config --global user.name "github-actions[bot]"
+              git add *
+              git commit -m"[BOT] Scrutineering Status Update ${GITHUB_RUN_ID}"
+              git push
+  asc-site-deploy:
+      needs: [scrutineering-update]
+      permissions:
+          contents: write
+      uses: ./.github/workflows/deploy.yml
+      secrets: inherit
