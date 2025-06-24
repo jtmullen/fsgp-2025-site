@@ -1,0 +1,77 @@
+{%- comment -%}
+FSGP Lap Chart Generator
+{%- endcomment -%}
+<canvas id="score-chart-full" width="1000px" height="250px" style="max-height:500px"></canvas>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js">
+</script>
+<script>
+var marksCanvas = document.getElementById("score-chart-full");
+{%- assign colors = "#FFFFFF,#003399,#FFCC00,#FE6100,#DC267F,#785EF0,#800000,#648FFF,#fabed4" | split: "," -%}
+
+Chart.defaults.font.family = "Lato";
+Chart.defaults.font.size = 22;
+Chart.defaults.color = "black";
+{%- assign lowest_e = 1000.0 -%}
+{%- assign highest_d = 1.0 -%}
+{%- for team in site.data.fsgp.mov-score -%}
+{%- if team.team != "modified" -%}
+{%- assign person = team.person | times: 1.0 -%}
+{%- assign ext-e = team.total-ext | times: 1.0 -%}
+{%- if ext-e < lowest_e -%}
+	{%- assign lowest_e = ext-e -%}
+{%- endif -%}
+{%- if person > highest_d -%}
+	{%- assign highest_d = person -%}
+{%- endif -%}{%- endif -%}{%- endfor -%}
+{%- assign sorted_teams = site.data.fsgp.mov-score | sort: "number" -%}
+var marksData = {
+  labels: ["Person Miles [D]", "Completion Factor [C]", "Speed Derating [T]", "External Energy [1/E]"],
+  datasets: [
+  {%- for team in sorted_teams -%}
+  {%- if team.team != "modified" -%}
+    {
+      label: "#{{team.number}} {{team.team}}",
+      backgroundColor: "{{colors[forloop.index0]}}44",
+      borderColor: "{{colors[forloop.index0]}}",
+      borderWidth: 1,
+      data: [{{team.person | times: 100.0 | divided_by: highest_d}}, {{team.completion | plus: 0}}, {{team.derate | times: 100}}, {{lowest_e | divided_by: team.total-ext | times: 100.0}} ]
+    },
+  {%- endif -%}{%- endfor -%}
+ ]
+};
+
+var chartOptions = {
+  plugins: {
+    legend: {
+      align: "start"
+    }
+  },
+  scales: {
+    r: {
+      pointLabels: {
+        font: {
+          size: 20
+        },
+        padding: 10,
+        callback: function(pointLabel, index, labels) {
+                return window.innerWidth > 649 ? pointLabel : pointLabel.split(" ")[pointLabel.split(" ").length - 1];
+            } 
+      },
+      ticks: {
+        display: false,
+      },
+      suggestedMin: 0,
+      suggestedMax: 100,
+      z: 1
+    }
+  }
+};
+
+var radarChart = new Chart(marksCanvas, {
+  type: "radar",
+  data: marksData,
+  options: chartOptions
+});
+
+</script>

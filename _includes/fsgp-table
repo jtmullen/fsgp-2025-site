@@ -1,0 +1,75 @@
+{%- comment -%}
+FSGP Heat Table Generator
+{%- endcomment -%}
+{%- assign class = include.class -%}
+{%- if class != "sov" and class != "mov" -%}
+  <p class="table-error-message"><i>Error generating Chart</i></p>
+{%- else -%}
+  {%- assign fullColorLapCount = 75 -%}
+	<p style="text-align:center;"><i> Scroll right to see all data on small screens. </i></p>
+  <div class="fsgp-table-wrapper"> 
+    <table class="fsgp-heat-table {{ class }}">
+      <thead>
+        <tr>
+          <th class="fsgp-th fsgp-th-team">Team</th>
+          <th class="fsgp-th fsgp-th-total">Total</th>
+          {%- for team in site.data.fsgp.[class] -%}
+            {%- if team.team == "labels" and team.penalty == "table" -%}
+              {%- for item in team offset:5 -%}
+                <th class="fsgp-th fsgp-th-lap-column">{{ item[1] }}</th>
+              {%- endfor -%}
+            {%- endif -%}
+          {%- endfor -%}
+          <th class="fsgp-th fsgp-th-penalty">Penalty</th>
+          <th class="fsgp-th fsgp-th-fastest">Fastest</th>
+        </tr>
+      </thead>
+      <tbody>
+        {%- assign modified = "" -%}
+        {%- assign sorted_teams = site.data.fsgp.[class] | sort: "total" -%}
+        
+        {%- for team in sorted_teams reversed -%}
+          {%- if team.team != "labels" and team.team != "modified" and team.team != "completed" -%}
+            {%- if team.total != "0" or team.penalty != "0" -%}
+              <tr class="fsgp-team-row fsgp-team-row-active">
+                <td class="fsgp-td fsgp-td-team-name">#{{ team.number }} - {{ team.team }} {{ team.asc }}</td>
+                <td class="fsgp-td fsgp-td-total"><b>{{ team.total }}</b></td>
+                {%- for item in team offset:5 -%}
+                  {%- assign currentLaps = item[1] | plus:0 -%}
+                  {%- assign totalTime = totalTime | plus:0 -%}
+                  <td class="fsgp-td fsgp-td-lap-count" style="background-color:rgba(34, 139, 34, calc({{currentLaps}}/{{fullColorLapCount}}))">{{ currentLaps }}</td>
+                {%- endfor -%}
+                <td class="fsgp-td fsgp-td-penalty">{{ team.penalty }}</td>
+                <td class="fsgp-td fsgp-td-fastest">{{ team.fastest }}</td>
+              </tr>
+            {%- endif -%}
+          {%- elsif team.team == "modified" -%}
+            {%- assign modified = team.penalty -%}
+          {%- endif -%}
+        {%- endfor -%}
+        
+        {%- for team in sorted_teams reversed -%}
+          {%- if team.team != "labels" and team.team != "modified" and team.team != "completed" -%}
+            {%- if team.total == "0" and team.penalty == "0" -%}
+              <tr class="fsgp-team-row fsgp-team-row-inactive">
+                <td class="fsgp-td fsgp-td-team-name">#{{ team.number }} - {{ team.team }}</td>
+                <td class="fsgp-td fsgp-td-total"><b>{{ team.total }}</b></td>
+                {%- for item in team offset:5 -%}
+                  {%- assign currentLaps = item[1] | plus:0 -%}
+                  {%- assign totalTime = totalTime | plus:0 -%}
+                  <td class="fsgp-td fsgp-td-lap-count fsgp-td-lap-count-inactive" style="background-color:rgba(183, 144, 1, calc({{currentLaps}}/100))">{{ currentLaps }}</td>
+                {%- endfor -%}
+                <td class="fsgp-td fsgp-td-penalty">{{ team.penalty }}</td>
+                <td class="fsgp-td fsgp-td-fastest">{{ team.fastest }}</td>
+              </tr>
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </tbody>
+    </table>
+    <div class="fsgp-table-footer">
+      <p><i>Last Updated: {{ modified }}</i></p>
+      <p><b>Darker Cells Indicate Teams Completing More Laps<br>*Indicates not cleared for the track</b></p>
+    </div>
+  </div>
+{%- endif -%}

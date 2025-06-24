@@ -1,0 +1,132 @@
+{%- comment -%}
+FSGP Lap Chart JS
+{%- endcomment -%}
+{%- assign class = include.class -%}
+{%if class != "sov" and class != "mov" -%} <i>Error generating Chart</i>
+{%- else -%}
+{%- assign teams = site.data.fsgp.[class] -%}
+{%- assign sorted_teams = teams | sort: "number" -%}
+{%- assign team_count = 0 -%}
+{%- for team in sorted_teams -%}
+{%- if team.team != "modified" -%}
+{%- if team.team != "labels" -%}
+{%- assign team_count = team_count | plus: 1 -%}
+{%- endif -%}
+{%- endif -%}
+{%- endfor -%}
+{%- if team_count == 0 -%}
+<i><b>Results Not Yet Available</b></i>
+{%- else -%}
+<style>
+.chart-container {
+    position: relative;
+    margin: auto;
+    height: 50vh;
+    width: 100%;
+}
+@media only screen and (max-width: 768px) {
+    .chart-container {
+        height: 110vh;
+    }
+}
+</style>
+<div class="chart-container">
+  <canvas id="fsgp-lap-{{class}}"></canvas>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  
+
+	function handleHover{{class}}(evt, item, legend) {
+	  legend.chart.data.datasets.forEach((line, index, lines) => {
+		lines[index].borderColor = index === item.datasetIndex  || lines[index].borderColor === 9 ? "#2B60DE" : "#999DA030";
+	  });
+	  item.fontColor = "#FFF";
+	  legend.chart.update();
+	}
+
+	function handleLeave{{class}}(evt, item, legend) {
+	  legend.chart.data.datasets.forEach((line, index, lines) => {
+		lines[index].borderColor = "#999DA0A0";
+	  });
+	  item.fontColor = "#666";
+	  legend.chart.update();
+	}
+
+
+	function handleClick{{class}}(evt, item, legend) {
+		handleLeave{{class}}(evt, item, legend);
+		handleHover{{class}}(evt, item, legend);
+	}
+
+
+	const ctx{{class}} = document.getElementById('fsgp-lap-{{class}}');
+	
+	const labels{{class}} = ["Start", "Day 1", "Day 2", "Day 3"];
+	const data{{class}} = {
+	  labels: labels{{class}},
+	  datasets: [
+	  {%- assign count = 0 -%}
+	  {%- for team in sorted_teams -%}
+	  {%- if team.team != "modified" -%}
+	  {%- if team.team != "labels" -%}
+		{
+		  label: '#{{team.number}} - {{team.team}}',
+		  data: [0,{%- if team.1 != ““ -%}{{team.1}}{%- endif -%},{%- if team.2 != ““ -%}{{team.1 | plus: team.2}}{%- endif -%},{%- if team.3 != ““ -%}{{team.1 | plus: team.2 | plus: team.3}}{%- endif -%}],
+		  backgroundColor: "#999DA0",
+		  borderColor:  "#999DA0A0",
+		  hoverBorderColor: "#2B60DE",
+		  hoverBackgroundColor: "#2B60DE",
+		  fill: false,
+		},
+	  {%- assign count = count | plus:1 -%}
+	  {%- endif -%}
+	  {%- endif -%}
+	  {%- endfor -%}
+	  ]
+	};
+
+  new Chart(ctx{{class}}, {
+    type: 'line',
+    data: data{{class}},
+    options: {
+		maintainAspectRatio: false,
+		responsive: true,
+	    hover: {
+		  mode: 'dataset'
+		},
+		onClick: (event, elements, chart) => {
+			chart.data.datasets.forEach((line, index, lines) => {
+				lines[index].borderColor = "#999DA0A0";
+			});
+			chart.update();
+		},
+		plugins: {
+		  title: {
+			display: true,
+			text: 'Lap Counts: {{class | upcase }} class (click on a team in the legend to highlight their line)'
+		  },
+		  colors: {
+			enabled: true
+		  },
+		  legend: {
+			onHover: handleHover{{class}},
+			onLeave: handleLeave{{class}},
+			position: 'bottom',
+			onClick: handleClick{{class}},
+			labels: {
+				boxWidth: 2,
+				padding: 14,
+				font: {
+					size: 12,
+				},
+			}
+		  }	
+		}
+	  },
+  });
+</script>
+{%- endif -%}
+{%- endif -%}
+ 

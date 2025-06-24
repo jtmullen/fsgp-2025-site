@@ -1,0 +1,136 @@
+{%- comment -%}
+FSGP Lap Chart JS
+{%- endcomment -%}
+{%- assign teams = site.data.fsgp.mov-score -%}
+{%- assign sorted_teams = teams | sort: "score" | reverse -%}
+{%- assign team_count = 0 -%}
+{%- for team in sorted_teams -%}
+{%- if team.team != "modified" -%}
+{%- if team.team != "labels" -%}
+{%- assign team_count = team_count | plus: 1 -%}
+{%- endif -%}
+{%- endif -%}
+{%- endfor -%}
+{%- if team_count == 0 -%}
+<i><b>MOV Scores Not Yet Available</b></i>
+{%- else -%}
+{%- assign max_personmi = 0 -%}
+{%- for team in sorted_teams -%}
+{%- if team.team != "modified" -%}
+{%- if team.team != "labels" -%}
+	{%- assign person_mi_sanitized = team.person | replace: ",", ""-%}
+	{%- assign team_personmi = person_mi_sanitized | plus: 0 -%}
+	{%- if team_personmi > max_personmi -%}
+		{%- assign max_personmi = team_personmi -%}
+	{%- endif -%}
+{%- endif -%}
+{%- endif -%}
+{%- endfor -%}
+{%- if max_personmi == 0 -%}
+<i><b>MOV Scores Not Yet Available</b></i>
+{%- else -%}
+{% assign mod_result = team_count | modulo:2 %}
+<h3 style="text-align: center;">Normalized MOV Score Component Charts</h3>
+<div class="row">
+{%- assign min_external = 100000 -%}
+{%- for team in sorted_teams -%}
+{%- if team.team != "modified" -%}
+{%- if team.team != "labels" -%}
+{%- if team.team contains "*" -%}
+{%- else -%}
+  <div class="large-6 columns" style="padding-top: 20px;">
+      <div class="chart-container-score-{{team.number}}">
+        <canvas id="fsgp-score-{{team.number}}"></canvas>
+      </div>
+  </div>
+  {%- if mod_result != 0 -%}
+  <div class="large-6 columns">
+  </div>
+  {%- endif -%}
+  {%- assign team_external = team.total-ext | plus: 0 -%}
+  {%- if team_external < min_external -%}
+	{%- if team_external > 0 -%}
+		{%- assign min_external = team_external -%}
+	{%- endif -%}
+  {%- endif -%}
+{%- endif -%}
+{%- endif -%}
+{%- endif -%}
+{%- endfor -%}
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+	const labels_score = ["Person Miles [D]", "Completion Factor [C]", "Speed Derating [T]", "External Energy [1/E]"];
+{%- for team in sorted_teams -%}
+{%- if team.team != "modified" -%}
+{%- if team.team != "labels" -%}
+{%- if team.team contains "*" -%}
+{%- else -%}
+	{%- assign team_ext = team.total-ext -%}
+	{%- assign person_mi_sanitized = team.person | replace: ",", ""-%}
+	
+	const ctx_score_{{team.number}} = document.getElementById('fsgp-score-{{team.number}}');
+	const data_score_{{team.number}} = {
+	  labels: labels_score,
+	  datasets: [
+	  {
+		data: [{{ person_mi_sanitized | times: 100 | divided_by: max_personmi }}, {{team.completion}}, {{team.derate | times: 100}}, {{min_external | times: 100 | divided_by: team.total-ext}}],
+		backgroundColor: [
+			"#EE4B2B7F","#FFAC1C7F","#FFEA007F","#00FFFF7F" 
+		]
+	  }
+	  ]
+	};
+
+  new Chart(ctx_score_{{team.number}}, {
+    type: 'polarArea',
+    data: data_score_{{team.number}},
+    options: {
+		maintainAspectRatio: false,
+		responsive: true,
+		scales: {
+		  r: {
+			pointLabels: {
+			  display: true,
+			  centerPointLabels: true,
+			  font: {
+				size: 12
+			  }
+			},
+			min: 0,
+			max: 100
+		  }
+		},
+		plugins: {
+		  legend: {
+			display: false,
+		  },
+		  title: {
+			display: true,
+			text: '#{{team.number}} - {{team.team}}',
+			font: {
+				size: 18
+			  }
+		  },
+		  tooltip: {
+			enabled: true,
+			displayColors: false,
+			callbacks: {
+				label: function(context) { 
+					return context.raw.toFixed(1) + "%";
+				}
+			}
+		  },
+		}
+	  },
+  });
+{%- endif -%}
+{%- endif -%}
+{%- endif -%}
+{%- endfor -%}
+
+</script>
+{%- endif -%}
+{%- endif -%}

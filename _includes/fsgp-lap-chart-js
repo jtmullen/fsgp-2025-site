@@ -1,0 +1,119 @@
+{%- comment -%}
+FSGP Lap Chart JS
+{%- endcomment -%}
+{%- assign class = include.class -%}
+{%if class != "sov" and class != "mov" -%} <i>Error generating Chart</i>
+{%- else -%}
+{%- assign colors = "#4aabed,#ff6384,#ff9f40,#ffcd56,#4bc0c0,#9966ff,#c9cbcf,#4aabed,#ff6384,#ff9f40,#ffcd56,#4bc0c0,#9966ff,#c9cbcf,#4aabed,#ff6384,#ff9f40,#ffcd56,#4bc0c0,#9966ff,#c9cbcf" | split: "," -%}
+{%- assign fillcolors = "#99cff4,#feb0c0,#fece9e,#fee5a9,#a4dede,#cbb1fe,#e3e4e6,#99cff4,#feb0c0,#fece9e,#fee5a9,#a4dede,#cbb1fe,#e3e4e6,#99cff4,#feb0c0,#fece9e,#fee5a9,#a4dede,#cbb1fe,#e3e4e6" | split: "," -%}
+{%- assign teams = site.data.fsgp.[class] -%}
+{%- assign sorted_teams = teams | sort: "number" -%}
+{%- assign team_count = 0 -%}
+{%- for team in sorted_teams -%}
+{%- if team.team != "modified" -%}
+{%- if team.team != "labels" -%}
+{%- assign team_count = team_count | plus: 1 -%}
+{%- endif -%}
+{%- endif -%}
+{%- endfor -%}
+{%- if team_count == 0 -%}
+<i><b>Results Not Yet Available</b></i>
+{%- else -%}
+<style>
+.chart-container-color {
+    position: relative;
+    margin: auto;
+    height: 45vh;
+    width: 100%;
+}
+@media only screen and (max-width: 768px) {
+    .chart-container-color {
+        height: 60vh;
+    }
+}
+</style>
+<div class="chart-container-color">
+  <canvas id="fsgp-lap-{{class}}"></canvas>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+
+	function handleHover(evt, item, legend) {
+	  legend.chart.data.datasets.forEach((line, index, lines) => {
+		lines[index].borderColor = index === item.datasetIndex  || lines[index].borderColor === 9 ? line.borderColor : line.borderColor + '36';
+	  });
+	  legend.chart.update();
+	}
+
+	function handleLeave(evt, item, legend) {
+	  legend.chart.data.datasets.forEach((line, index, lines) => {
+		lines[index].borderColor = line.borderColor.length === 9 ? line.borderColor.slice(0, -2) : line.borderColor;
+	  });
+	  legend.chart.update();
+	}
+	
+	function handleClick(evt, item, legend) {
+		handleLeave(evt, item, legend);
+		handleHover(evt, item, legend);
+	}
+
+	const ctx{{class}} = document.getElementById('fsgp-lap-{{class}}');
+	
+	const labels{{class}} = ["Start", "Day 1", "Day 2", "Day 3"];
+	const data{{class}} = {
+	  labels: labels{{class}},
+	  datasets: [
+	  {%- assign count = 0 -%}
+	  {%- for team in sorted_teams -%}
+	  {%- if team.team != "modified" -%}
+	  {%- if team.team != "labels" -%}
+	  {%- if team.team contains "*" -%}
+	  {%- else -%}
+		{
+		  label: '#{{team.number}} - {{team.team}}',
+		  data: [0,{%- if team.1 != ““ -%}{{team.1}}{%- endif -%},{%- if team.2 != ““ -%}{{team.1 | plus: team.2}}{%- endif -%},{%- if team.3 != ““ -%}{{team.1 | plus: team.2 | plus: team.3}}{%- endif -%}],
+		  backgroundColor: "{{fillcolors[count]}}",
+		  borderColor:  "{{colors[count]}}",
+		},
+	  {%- assign count = count | plus:1 -%}
+	  {%- endif -%}
+	  {%- endif -%}
+	  {%- endif -%}
+	  {%- endfor -%}
+	  ]
+	};
+
+  new Chart(ctx{{class}}, {
+    type: 'line',
+    data: data{{class}},
+    options: {
+		maintainAspectRatio: false,
+		responsive: true,
+		plugins: {
+		  title: {
+			display: true,
+			text: 'Lap Counts: {{class | upcase }} class'
+		  },
+		  colors: {
+			enabled: true
+		  },
+		  legend: {
+		  	onHover: handleHover,
+			onLeave: handleLeave,
+			position: 'bottom',
+			onClick: handleClick,
+		  },
+		},
+		onClick: (event, elements, chart) => {
+			chart.data.datasets.forEach((line, index, lines) => {
+				lines[index].borderColor = line.borderColor.length === 9 ? line.borderColor.slice(0, -2) : line.borderColor;
+			});
+			chart.update();
+		}
+	  },
+  });
+</script>
+{%- endif -%}
+{%- endif -%}
+ 

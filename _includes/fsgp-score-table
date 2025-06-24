@@ -1,0 +1,53 @@
+{%- comment -%}
+FSGP MOV Score Table Generator
+{%- endcomment -%}
+<div class="fsgp-table-wrapper" markdown="0"> 
+    <table class="fsgp-heat-table fsgp-score-table"> 
+        <thead>
+            <tr>
+                <th class="fsgp-th fsgp-th-group-header"> </th>
+                <th colspan="4" class="fsgp-th fsgp-th-group-header fsgp-th-group-right-border">Calculated Values</th>
+                <th colspan="6" class="fsgp-th fsgp-th-group-header">Data Points</th>
+            </tr>
+            <tr>
+                <th class="fsgp-th fsgp-th-main-bottom-border fsgp-th-main-right-border fsgp-th-team-column"> Team </th>
+                <th class="fsgp-th fsgp-th-main-bottom-border fsgp-th-main-right-border"> Score [S] </th>
+                <th class="fsgp-th fsgp-th-main-bottom-border"> Completion<br>Factor [C] </th>
+                <th class="fsgp-th fsgp-th-main-bottom-border"> Speed<br>Derating [T]</th>
+                <th class="fsgp-th fsgp-th-main-bottom-border fsgp-th-main-right-border"> External<br>Energy [E] (kWh) </th>
+                <th class="fsgp-th fsgp-th-main-bottom-border"> Event Miles<br>Driven </th>
+                <th class="fsgp-th fsgp-th-main-bottom-border"> Person<br>Miles [D]</th>
+                <th class="fsgp-th fsgp-th-main-bottom-border"> Penalty<br>Miles </th>
+                <th class="fsgp-th fsgp-th-main-bottom-border"> Avg. Speed (mph)</th>
+                <th class="fsgp-th fsgp-th-main-bottom-border"> Battery<br>Capacity (kWh)</th>
+                <th class="fsgp-th fsgp-th-main-bottom-border fsgp-th-main-right-border"> External<br>Charging (kWh) </th>
+            </tr>
+        </thead>
+        <tbody>
+        {%- assign sorted_teams = site.data.fsgp.mov-score | sort: "score" -%}
+        {%- for team in sorted_teams reversed -%}
+        {%- if team.team != "modified" -%}
+            <tr>
+                <td class="fsgp-td fsgp-td-main-right-border fsgp-td-team-name"><b>#{{team.number}} - {{team.team}}</b></td>
+                <td class="fsgp-td fsgp-td-main-right-border fsgp-td-score"><b>{{team.score}}</b></td>
+                <td class="fsgp-td">{{team.completion}}%</td>
+                <td class="fsgp-td">{{team.derate}}</td>
+                <td class="fsgp-td fsgp-td-main-right-border">{{team.total-ext}}</td>
+                <td class="fsgp-td">{{team.miles}}</td>
+                <td class="fsgp-td">{{team.person}}</td>
+                <td class="fsgp-td">{{team.penalty}}</td>
+                <td class="fsgp-td">{{team.speed}}</td>
+                <td class="fsgp-td">{{team.capacity}}</td>
+                <td class="fsgp-td fsgp-td-main-right-border">{{team.external}}</td>
+            </tr>
+        {%- else -%}
+        {%- assign modified = team.number -%}
+        {%- endif -%}
+        {%- endfor -%}
+        </tbody>
+    </table>
+    <div class="fsgp-table-footer">
+        <p><i>Last Updated: {{modified}}</i></p>
+        <p>*Indicates not cleared for the track</p>
+    </div>
+</div>
