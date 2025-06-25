@@ -93,6 +93,8 @@ if __name__ == "__main__":
 
     processed_html = extracted_html.replace(r'\[', r'\\[')
     processed_html = processed_html.replace(r'\]', r'\\]')
+    processed_html = processed_html.replace(r'\times', r'\\times')
+    processed_html = processed_html.replace(r'\frac', r'\\frac')
     
     # print(f"Extracted HTML (first 200 chars): {extracted_html[:200]}...") # For debugging
 
