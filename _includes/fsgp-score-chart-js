@@ -30,7 +30,7 @@ FSGP Lap Chart JS
 <i><b>MOV Scores Not Yet Available</b></i>
 {%- else -%}
 {% assign mod_result = team_count | modulo:2 %}
-<h3 style="text-align: center;">Normalized MOV Score Component Charts</h3>
+<h3 style="text-align: center;">Normalized MOV Score Components</h3>
 <div class="row">
 {%- assign min_external = 100000 -%}
 {%- for team in sorted_teams -%}

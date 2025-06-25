@@ -33,6 +33,7 @@ FSGP Lap Chart JS
 }
 </style>
 <div class="chart-container-color">
+<h3 style="text-align: center;">{{class | upcase }} Class Lap Counts</h3>
   <canvas id="fsgp-lap-{{class}}"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -92,7 +93,7 @@ FSGP Lap Chart JS
 		responsive: true,
 		plugins: {
 		  title: {
-			display: true,
+			display: false,
 			text: 'Lap Counts: {{class | upcase }} class'
 		  },
 		  colors: {

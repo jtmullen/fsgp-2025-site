@@ -1,8 +1,9 @@
 {%- comment -%}
 FSGP MOV Score Table Generator
 {%- endcomment -%}
-<div class="fsgp-table-wrapper" markdown="0"> 
-    <table class="fsgp-heat-table fsgp-score-table"> 
+<p style="text-align:center;"><i> Scroll right to see all data on smaller screens. </i></p>
+<div class="fsgp-score-table-full-width-wrapper"> 
+    <table class="fsgp-heat-table fsgp-score-table">
         <thead>
             <tr>
                 <th class="fsgp-th fsgp-th-group-header"> </th>
@@ -14,13 +15,13 @@ FSGP MOV Score Table Generator
                 <th class="fsgp-th fsgp-th-main-bottom-border fsgp-th-main-right-border"> Score [S] </th>
                 <th class="fsgp-th fsgp-th-main-bottom-border"> Completion<br>Factor [C] </th>
                 <th class="fsgp-th fsgp-th-main-bottom-border"> Speed<br>Derating [T]</th>
-                <th class="fsgp-th fsgp-th-main-bottom-border fsgp-th-main-right-border"> External<br>Energy [E] (kWh) </th>
+                <th class="fsgp-th fsgp-th-main-bottom-border fsgp-th-main-right-border"> Total External<br>Energy [E] (kWh) </th>
                 <th class="fsgp-th fsgp-th-main-bottom-border"> Event Miles<br>Driven </th>
                 <th class="fsgp-th fsgp-th-main-bottom-border"> Person<br>Miles [D]</th>
                 <th class="fsgp-th fsgp-th-main-bottom-border"> Penalty<br>Miles </th>
-                <th class="fsgp-th fsgp-th-main-bottom-border"> Avg. Speed (mph)</th>
-                <th class="fsgp-th fsgp-th-main-bottom-border"> Battery<br>Capacity (kWh)</th>
-                <th class="fsgp-th fsgp-th-main-bottom-border fsgp-th-main-right-border"> External<br>Charging (kWh) </th>
+                <th class="fsgp-th fsgp-th-main-bottom-border"> Average<br>Speed (mph)</th>
+                <th class="fsgp-th fsgp-th-main-bottom-border"> Battery <br>Capacity (kWh)</th>
+                <th class="fsgp-th fsgp-th-main-bottom-border fsgp-th-main-right-border"> External <br>Charging (kWh) </th>
             </tr>
         </thead>
         <tbody>
@@ -46,8 +47,6 @@ FSGP MOV Score Table Generator
         {%- endfor -%}
         </tbody>
     </table>
-    <div class="fsgp-table-footer">
-        <p><i>Last Updated: {{modified}}</i></p>
-        <p>*Indicates not cleared for the track</p>
-    </div>
 </div>
+<p style="text-align:center;"><i>Last Updated: {{modified}}</i></p>
+<p style="text-align:center;">*Indicates not cleared for the track</p>
