@@ -12,7 +12,9 @@ timezone: null
 lsi: false
 markdown: kramdown
 
-
+kramdown:
+  math_engine: mathjax
+  
 ### content configuration ###
 title:       "SinglePaged - Simple Jekyll template"
 keywords:    "SinglePaged, jekyll, template, github, blog, single page"
