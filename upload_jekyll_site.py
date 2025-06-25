@@ -90,8 +90,11 @@ if __name__ == "__main__":
     if extracted_html is None:
         print("Failed to extract HTML content. Exiting.")
         exit(1)
+		
+	processed_html = extracted_html.replace(r'\[', r'\\[')
+    processed_html = processed_html.replace(r'\]', r'\\]')
     
     # print(f"Extracted HTML (first 200 chars): {extracted_html[:200]}...") # For debugging
 
     print(f"Uploading content to WordPress page ID {wp_page_id}...")
-    upload_to_wordpress(wp_url, wp_username, wp_app_password, wp_page_id, acf_field_name, extracted_html)
+    upload_to_wordpress(wp_url, wp_username, wp_app_password, wp_page_id, acf_field_name, processed_html)
