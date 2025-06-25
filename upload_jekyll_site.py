@@ -90,8 +90,8 @@ if __name__ == "__main__":
     if extracted_html is None:
         print("Failed to extract HTML content. Exiting.")
         exit(1)
-		
-	processed_html = extracted_html.replace(r'\[', r'\\[')
+
+    processed_html = extracted_html.replace(r'\[', r'\\[')
     processed_html = processed_html.replace(r'\]', r'\\]')
     
     # print(f"Extracted HTML (first 200 chars): {extracted_html[:200]}...") # For debugging
