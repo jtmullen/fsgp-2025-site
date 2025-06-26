@@ -1,0 +1,54 @@
+name: Update FSGP Results Status
+
+on: 
+    repository_dispatch:
+        types: [fsgp_results]
+        
+
+jobs:
+    results-update:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+        timeout-minutes: 5
+        steps:
+            - name: Log Info
+              run: |
+                echo "Time: ${{ github.event.client_payload.time }}"
+                echo "SOV: ${{ github.event.client_payload.sov }}; MOV: ${{ github.event.client_payload.mov }}; Score: ${{ github.event.client_payload.score }}"
+                echo "SOV Data: ${{ github.event.client_payload.sov_data }}"
+                echo "MOV Data: ${{ github.event.client_payload.mov_data }}"
+                echo "Score Data: ${{ github.event.client_payload.score_data }}"
+            - uses: actions/checkout@v4
+              name: Checkout Repo
+            - name: Generate New SOV CSV File
+              if: ${{ github.event.client_payload.sov }}
+              run: |
+                cd $GITHUB_WORKSPACE
+                cd _data/fsgp
+                echo -n $'${{ github.event.client_payload.sov_data }}' > sov.csv
+            - name: Generate New MOV CSV File
+              if: ${{ github.event.client_payload.mov }}
+              run: |
+                cd $GITHUB_WORKSPACE
+                cd _data/fsgp
+                echo -n $'${{ github.event.client_payload.mov_data }}' > mov.csv
+            - name: Generate New Score CSV File
+              if: ${{ github.event.client_payload.score }}
+              run: |
+                cd $GITHUB_WORKSPACE
+                cd _data/fsgp
+                echo -n $'${{ github.event.client_payload.score_data }}' > mov-score.csv
+            - name: Push to Git
+              run: |
+                git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+                git config --global user.name "github-actions[bot]"
+                git add *
+                git commit -m"[BOT] Results Update ${GITHUB_RUN_ID}"
+                git push
+    asc-site-deploy:
+        needs: [results-update]
+        permissions:
+            contents: write
+        uses: ./.github/workflows/deploy.yml
+        secrets: inherit
