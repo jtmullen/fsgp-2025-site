@@ -57,9 +57,8 @@ FSGP Lap Chart JS
 {%- endif -%}
 {%- endif -%}
 {%- endfor -%}
-
-
-[raw_html]
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
 	const labels_score = ["Person Miles [D]", "Completion Factor [C]", "Speed Derating [T]", "External Energy [1/E]"];
 {%- for team in sorted_teams -%}
@@ -131,6 +130,5 @@ FSGP Lap Chart JS
 {%- endfor -%}
 
 </script>
-[/raw_html]
 {%- endif -%}
 {%- endif -%}
