@@ -19,6 +19,7 @@ FSGP Lap Chart JS
 {%- if team_count == 0 -%}
 <i><b>Results Not Yet Available</b></i>
 {%- else -%}
+[raw_html]
 <style>
 .chart-container-color {
     position: relative;
@@ -36,8 +37,6 @@ FSGP Lap Chart JS
 <h3 style="text-align: center;">{{class | upcase }} Class Lap Counts</h3>
   <canvas id="fsgp-lap-{{class}}"></canvas>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
 <script>
 
 	function handleHover(evt, item, legend) {
@@ -115,6 +114,7 @@ FSGP Lap Chart JS
 	  },
   });
 </script>
+[/raw_html]
 {%- endif -%}
 {%- endif -%}
  

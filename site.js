@@ -127,66 +127,50 @@ if (!navbar) {
 }
 
 
-// Map query parameter values to actual tab IDs
-const validTabMapping = {
-    'sov': 'fsgp-table-sov',
-    'mov-laps': 'fsgp-laps-mov',
-    'mov': 'fsgp-score-mov'
-};
+jQuery(document).ready(function($) {
+    // Function to handle tab switching logic
+    function openTab(tabName) {
+        // 1. Hide all tab content panels
+        $('.fsgp-table-content-panel').hide();
 
-// Function to get the key from an object based on its value
-function getKeyByValue(object, value) {
-  return Object.keys(object).find(key => object[key] === value);
-}
+        // 2. Deactivate all tab buttons (remove 'active' class)
+        $('.fsgp-tab-button').removeClass('active');
 
-function showFsgpTab(tabId, urlUpdate=true) {
-    // Hide all tab content panels
-    const panels = document.querySelectorAll('.fsgp-table-content-panel');
-    panels.forEach(panel => {
-        panel.style.display = 'none';
-    });
+        // 3. Show the specific tab content panel based on its ID
+        $('#' + tabName).show();
 
-    // Deactivate all buttons
-    const buttons = document.querySelectorAll('.fsgp-tab-button');
-    buttons.forEach(button => {
-        button.classList.remove('active');
-    });
-
-    // Show the selected tab content
-    const selectedPanel = document.getElementById(tabId);
-    if (selectedPanel) {
-        selectedPanel.style.display = 'block';
+        // 4. Set the clicked button as active (add 'active' class)
+        // Find the button with the matching data-tab attribute
+        $('.fsgp-tab-button[data-tab="' + tabName + '"]').addClass('active');
     }
 
-    // Activate the corresponding button
-    const targetButton = document.querySelector(`.fsgp-tab-button[onclick*="'${tabId}'"]`);
-    if (targetButton) {
-        targetButton.classList.add('active');
+    // Set up event delegation for tab buttons
+    // We listen for clicks on the parent container (fsgp-tab-buttons)
+    // and then check if the clicked element (or a parent of it) is a fsgp-tab-button
+    var tabButtonsContainer = $('.fsgp-tab-buttons');
+    if (tabButtonsContainer.length) { // Ensure the container exists on the page
+        tabButtonsContainer.on('click', '.fsgp-tab-button', function() {
+            var tabName = $(this).data('tab'); // Get the value from the data-tab attribute
+            if (tabName) { // Make sure a data-tab attribute exists
+                openTab(tabName);
+            }
+        });
+
+        // --- Initialize: Show the default active tab on page load ---
+        // This ensures one tab is visible when the page first loads.
+        var initialActiveTabButton = $('.fsgp-tab-button.active');
+        if (initialActiveTabButton.length) {
+            // If an 'active' class is explicitly set on a button, open that tab
+            var initialTabName = initialActiveTabButton.data('tab');
+            if (initialTabName) {
+                openTab(initialTabName);
+            }
+        } else {
+            // If no active tab is explicitly set, default to opening the very first tab
+            var firstTabButton = $('.fsgp-tab-button').first();
+            if (firstTabButton.length) {
+                openTab(firstTabButton.data('tab'));
+            }
+        }
     }
-
-    const newTabShortName = getKeyByValue(validTabMapping, tabId);
-    
-    // Ensure we found a valid short name before updating URL
-    if (newTabShortName && urlUpdate) {
-        const currentUrl = new URL(window.location.href);
-        currentUrl.searchParams.set('tab', newTabShortName); 
-        history.replaceState(null, '', currentUrl.toString());
-    }
-}
-
-// Determine active tab based on URL query parameter on page load
-document.addEventListener('DOMContentLoaded', () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const requestedTab = urlParams.get('tab'); // Get the value of the 'tab' query parameter
-
-    let defaultTabId = 'fsgp-table-sov'; // This is the default if no valid query param is found
-
-    let tabToActivate = defaultTabId;
-
-    // Check if the requestedTab exists and is valid in our mapping
-    if (requestedTab && validTabMapping[requestedTab]) {
-        tabToActivate = validTabMapping[requestedTab];
-    }
-
-    showFsgpTab(tabToActivate, false);
 });
