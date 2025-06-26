@@ -12,7 +12,7 @@ FSGP Lap Chart JS
 {%- endif -%}
 {%- endfor -%}
 {%- if team_count == 0 -%}
-<i><b>MOV Scores Not Yet Available</b></i>
+<p style="text-align:center"><i><b>MOV Scores Not Yet Available</b></i></p>
 {%- else -%}
 {%- assign max_personmi = 0 -%}
 {%- for team in sorted_teams -%}
@@ -27,7 +27,7 @@ FSGP Lap Chart JS
 {%- endif -%}
 {%- endfor -%}
 {%- if max_personmi == 0 -%}
-<i><b>MOV Scores Not Yet Available</b></i>
+<p style="text-align:center"><i><b>MOV Scores Not Yet Available</b></i></p>
 {%- else -%}
 {% assign mod_result = team_count | modulo:2 %}
 <h3 style="text-align: center;">Normalized MOV Score Components</h3>

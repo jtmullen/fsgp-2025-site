@@ -17,7 +17,7 @@ FSGP Lap Chart JS
 {%- endif -%}
 {%- endfor -%}
 {%- if team_count == 0 -%}
-<i><b>Results Not Yet Available</b></i>
+<p style="text-align:center"></p><i><b>Results Not Yet Available</b></i></p>
 {%- else -%}
 <style>
 .chart-container-color {
