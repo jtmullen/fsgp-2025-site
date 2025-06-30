@@ -3,7 +3,7 @@ title,,,Driver Registration,Driver Operations,Lights & Vision,Body & Sizing,Elec
 Purdue,1,,,,,,,,,,,,
 Kentucky,3,,,,,,,,,,,,
 Florida,5,,,,,,,,,,,,
-Berkeley,6,,,,,,,,,,,,
+Berkeley,6,,,,,,,,,,,,GN
 UT Austin,8,,,,,,,,,,,,GN
 Iowa State,9,,,,,,,,,,,,
 RIT,10,,,,,,,,,,,,
@@ -18,7 +18,7 @@ Waterloo,24,,,,,,,,,,,,
 British Columbia,26,,,,,,,,,,,,
 Missouri S&T,42,,,,,,,,,,,,
 Georgia Tech,49,,GN,,,,,,,,,,
-Poly Montreal,55,,,,,,YE,,,,,,
+Poly Montreal,55,,,,,,YE,GN,,,,,
 SIUE,57,,,,,,,,,,,,
 Calgary,65,,,,,,,,,,,,
 Rutgers,66,,,,,,,,,,,,
@@ -33,4 +33,4 @@ UOP,777,,,,,,,,,,,,
 Western Michigan,786,,,,,,,,,,,,GN
 Puerto Rico,787,,,,,,,,,,,,
 App State,828,,,,,YE,RD,,,,,,
-modified,30 Jun 2025 - 12:13PM Central Daylight Time,,,,,,,,,,,
+modified,30 Jun 2025 - 12:28PM Central Daylight Time,,,,,,,,,,,
