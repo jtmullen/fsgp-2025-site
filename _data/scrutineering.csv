@@ -3,7 +3,7 @@ title,,,Driver Registration,Driver Operations,Lights & Vision,Body & Sizing,Elec
 Purdue,1,,,,,,,,,,,,
 Kentucky,3,,,,,,,,,,,,
 Florida,5,,GN,,,,,,,,,,
-Berkeley,6,,GN,,YE,,,,,,,,GN
+Berkeley,6,,GN,,YE,,,,RD,,,,GN
 UT Austin,8,,,,,,,,,,,,GN
 Iowa State,9,,,,,,,,,,,,
 RIT,10,,,,,,,,,,,GN,
@@ -15,7 +15,7 @@ Washington,18,,,,,,,,,,,,GN
 Virginia Tech,21,,GN,YE,,,,,RD,,,,
 Illinois,22,,GN,GN,,GN,YE,,RD,,,GN,
 Waterloo,24,,,,,,,,,,,GN,
-British Columbia,26,,GN,,,,YE,GN,,,,,
+British Columbia,26,,GN,GN,,,YE,GN,,,,,
 Missouri S&T,42,,,,,,,,,,,,
 Georgia Tech,49,,GN,GN,,YE,,GN,YE,,,,
 Poly Montreal,55,,GN,GN,BU,GN,GN,GN,GN,,GN,GN,
@@ -23,14 +23,14 @@ SIUE,57,,,,,,,,,,,,
 Calgary,65,,GN,GN,,YE,,,BU,,,,
 Rutgers,66,,,,,,,,,,,,
 Toronto,77,,,,,,,,,,,,
-Florida Poly,79,,GN,,,,,,,,,GN,
+Florida Poly,79,,GN,GN,,,,,,,,GN,
 Virginia,87,,,,,,,,,,,,GN
 UC Irvine,95,,,,,,,,,,,GN,GN
 Western Ontario,96,,,,,,,,,,,,
 McMaster,116,,,,,,,,,,,,
 Montana State,406,,GN,YE,,,,,RD,,,,GN
 UOP,777,,,,,,,,,,,,
-Western Michigan,786,,,,,GN,GN,YE,,,,GN,GN
+Western Michigan,786,,,,,GN,GN,GN,,,,GN,GN
 Puerto Rico,787,,,,,,,,,,,,
 App State,828,,,,,YE,RD,,,,,GN,
-modified,30 Jun 2025 - 04:43PM Central Daylight Time,,,,,,,,,,,
+modified,30 Jun 2025 - 04:58PM Central Daylight Time,,,,,,,,,,,
