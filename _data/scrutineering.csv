@@ -17,7 +17,7 @@ Illinois,22,,GN,GN,,GN,,,,,,,
 Waterloo,24,,,,,,,,,,,,
 British Columbia,26,,,,,,YE,,,,,,
 Missouri S&T,42,,,,,,,,,,,,
-Georgia Tech,49,,GN,GN,,,,,,,,,
+Georgia Tech,49,,GN,GN,,YE,,,,,,,
 Poly Montreal,55,,,,,,GN,GN,,,,,
 SIUE,57,,,,,,,,,,,,
 Calgary,65,,,,,,,,,,,,
@@ -30,7 +30,7 @@ Western Ontario,96,,,,,,,,,,,,
 McMaster,116,,,,,,,,,,,,
 Montana State,406,,,,,,,,,,,,GN
 UOP,777,,,,,,,,,,,,
-Western Michigan,786,,,,,,,,,,,,GN
+Western Michigan,786,,,,,GN,,,,,,,GN
 Puerto Rico,787,,,,,,,,,,,,
 App State,828,,,,,YE,RD,,,,,,
-modified,30 Jun 2025 - 01:43PM Central Daylight Time,,,,,,,,,,,
+modified,30 Jun 2025 - 01:58PM Central Daylight Time,,,,,,,,,,,
