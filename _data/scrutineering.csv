@@ -15,7 +15,7 @@ Washington,18,,,,,,,,,,GN,,GN
 Virginia Tech,21,,GN,YE,,,BU,,RD,,,,GN
 Illinois,22,,GN,GN,,GN,YE,GN,RD,,,GN,
 Waterloo,24,,,,,,GN,GN,,,,GN,
-British Columbia,26,,GN,GN,,,GN,GN,,,,,
+British Columbia,26,,GN,GN,,,YE,GN,,,,,
 Missouri S&T,42,,,,,,,,,,,,
 Georgia Tech,49,,GN,GN,GN,YE,GN,GN,YE,,GN,,
 Poly Montreal,55,,GN,GN,BU,GN,GN,GN,GN,,GN,GN,GN
@@ -23,7 +23,7 @@ SIUE,57,,,,,,,,,,,,
 Calgary,65,,GN,GN,,YE,,,BU,,,,
 Rutgers,66,,,,,,,,,,,,
 Toronto,77,,,,,,,,,,,,
-Florida Poly,79,,GN,GN,GN,GN,,,,,GN,GN,
+Florida Poly,79,,GN,GN,GN,GN,YE,,,,GN,GN,
 Virginia,87,,,,,,,,,,,,GN
 UC Irvine,95,,,,,,,,,,,GN,GN
 Western Ontario,96,,,,,,,,,,,,
@@ -31,6 +31,6 @@ McMaster,116,,,,,,,,,,,,
 Montana State,406,,GN,YE,,GN,,,RD,,,,GN
 UOP,777,,,,,,,,,,,,
 Western Michigan,786,,,,YE,GN,GN,GN,,,,GN,GN
-Puerto Rico,787,,,,,,,,,,GN,,
-App State,828,,,,,YE,RD,,,,,GN,
-modified,30 Jun 2025 - 06:28PM Central Daylight Time,,,,,,,,,,,
+Puerto Rico,787,,,,,,YE,,,,GN,,
+App State,828,,,,,YE,YE,,,,,GN,
+modified,30 Jun 2025 - 06:58PM Central Daylight Time,,,,,,,,,,,
