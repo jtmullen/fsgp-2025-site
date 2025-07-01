@@ -1,6 +1,6 @@
 team,number,order,1,2,3,4,5,6,7,8,9,10,11
 title,,,Driver Registration,Driver Operations,Lights & Vision,Body & Sizing,Electrical,Battery Protection,Mechanical,Dynamics,Solar Array,Safety,Impound/MOV
-Purdue,1,,GN,,,,,,,,,GN,
+Purdue,1,,GN,,,,,,RD,,,GN,
 Kentucky,3,,,,,,,,,,,GN,
 Florida,5,,GN,,,YE,YE,,,,GN,GN,
 Berkeley,6,,GN,GN,YE,,YE,GN,RD,,GN,GN,GN
@@ -8,7 +8,7 @@ UT Austin,8,,,,,,,GN,,,GN,GN,GN
 Iowa State,9,,,,,,,,,,,,
 RIT,10,,GN,,,RD,YE,,RD,,,GN,
 Northwestern,11,,,,,,,,,,,,
-Michigan State,13,,GN,,,,,,,,,GN,GN
+Michigan State,13,,GN,,,,,,RD,,,GN,GN
 Stanford,16,,GN,GN,GN,,,,,,,GN,
 Illinois State,17,,GN,,,,,,,,,,
 Washington,18,,GN,,,,,,,,GN,GN,GN
@@ -32,5 +32,5 @@ Montana State,406,,GN,GN,GN,GN,,,RD,,,GN,GN
 UOP,777,,GN,,,,,,,,,GN,
 Western Michigan,786,,GN,GN,YE,GN,GN,GN,,,,GN,GN
 Puerto Rico,787,,GN,,,,YE,,RD,,GN,,
-App State,828,,GN,GN,,YE,YE,,,,,GN,
-modified,1 Jul 2025 - 04:43PM Central Daylight Time,,,,,,,,,,,
+App State,828,,GN,GN,,YE,YE,YE,,,,GN,
+modified,1 Jul 2025 - 04:58PM Central Daylight Time,,,,,,,,,,,
