@@ -1,25 +1,25 @@
 team,number,order,1,2,3,4,5,6,7,8,9,10,11
 title,,,Driver Registration,Driver Operations,Lights & Vision,Body & Sizing,Electrical,Battery Protection,Mechanical,Dynamics,Solar Array,Safety,Impound/MOV
-Purdue,1,,GN,,,,,,RD,,,GN,
+Purdue,1,,GN,GN,,,,,RD,,,GN,
 Kentucky,3,,GN,,,,,,,,,GN,
 Florida,5,,GN,GN,YE,YE,YE,,YE,,GN,GN,GN
-Berkeley,6,,GN,GN,YE,,YE,GN,GN,,GN,GN,GN
+Berkeley,6,,GN,GN,BU,GN,YE,GN,GN,,GN,GN,GN
 UT Austin,8,,GN,GN,YE,,YE,GN,,,GN,GN,GN
-Iowa State,9,,,,,,,,,,,,
+Iowa State,9,,,,,,,,,,,GN,
 RIT,10,,GN,,,RD,YE,,RD,,,GN,
-Northwestern,11,,,,,,RD,,,,,,
+Northwestern,11,,GN,,,,RD,,,,,,
 Michigan State,13,,GN,,,RD,RD,,RD,,,GN,GN
 Stanford,16,,GN,GN,GN,GN,GN,GN,,,,GN,
-Illinois State,17,,GN,,,RD,,,,,,,
+Illinois State,17,,GN,,,RD,,,,,,GN,
 Washington,18,,GN,GN,,BU,YE,,,,GN,GN,GN
 Virginia Tech,21,,GN,YE,,RD,RD,,YE,,,GN,GN
 Illinois,22,,GN,GN,YE,GN,YE,GN,YE,,,GN,
 Waterloo,24,,GN,GN,GN,YE,GN,GN,GN,GN,GN,GN,
 British Columbia,26,,GN,GN,YE,GN,YE,GN,BU,,,GN,
 Missouri S&T,42,,GN,,,,YE,BU,,,,GN,
-Georgia Tech,49,,GN,GN,GN,GN,GN,GN,GN,GN,GN,GN,
+Georgia Tech,49,,GN,GN,GN,GN,GN,GN,GN,GN,GN,GN,GN
 Poly Montreal,55,1,GN,GN,BU,GN,GN,GN,GN,GN,GN,GN,GN
-SIUE,57,,GN,GN,,,YE,,,,,,
+SIUE,57,,GN,GN,,,YE,,,,,GN,
 Calgary,65,,GN,GN,YE,YE,YE,,BU,,,GN,
 Rutgers,66,,GN,,,,,,,,,GN,
 Toronto,77,,GN,,YE,,YE,,,,,GN,
@@ -27,10 +27,10 @@ Florida Poly,79,2,GN,GN,GN,GN,GN,GN,BU,GN,GN,GN,GN
 Virginia,87,,GN,YE,,RD,YE,,RD,,,GN,GN
 UC Irvine,95,,GN,GN,,RD,RD,,,,,GN,GN
 Western Ontario,96,,GN,,,,RD,,,,,GN,
-McMaster,116,,GN,,,,,,,,,,
+McMaster,116,,GN,,,,,,,,,GN,
 Montana State,406,,GN,GN,GN,GN,YE,GN,BU,,GN,GN,GN
 UOP,777,,GN,,,,RD,,,,,GN,
 Western Michigan,786,,GN,GN,GN,GN,GN,GN,GN,,,GN,GN
 Puerto Rico,787,,GN,,,,YE,,RD,,GN,GN,
 App State,828,,GN,GN,GN,GN,GN,YE,GN,GN,,GN,
-modified,2 Jul 2025 - 11:13AM Central Daylight Time,,,,,,,,,,,
+modified,2 Jul 2025 - 11:28AM Central Daylight Time,,,,,,,,,,,
