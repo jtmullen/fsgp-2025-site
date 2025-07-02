@@ -19,12 +19,12 @@ British Columbia,26,,GN,GN,YE,GN,YE,GN,BU,,GN,GN,
 Missouri S&T,42,,GN,,,YE,YE,BU,RD,,,GN,
 Georgia Tech,49,3,GN,GN,GN,GN,GN,GN,GN,GN,GN,GN,GN
 Poly Montreal,55,1,GN,GN,BU,GN,GN,GN,GN,GN,GN,GN,GN
-SIUE,57,,GN,GN,,GN,YE,YE,RD,,,GN,
+SIUE,57,,GN,GN,,GN,YE,YE,RD,,,GN,GN
 Calgary,65,,GN,GN,YE,YE,YE,,BU,,,GN,
 Rutgers,66,,GN,,,,,,,,,GN,
 Toronto,77,,GN,,YE,GN,YE,,YE,,,GN,
 Florida Poly,79,2,GN,GN,GN,GN,GN,GN,BU,GN,GN,GN,GN
-Virginia,87,,GN,YE,,RD,YE,,RD,,,GN,GN
+Virginia,87,,GN,YE,,RD,YE,GN,RD,,,GN,GN
 UC Irvine,95,,GN,GN,,RD,RD,,YE,,,GN,GN
 Western Ontario,96,,GN,,,,RD,,,,,GN,
 McMaster,116,,GN,,,,,,,,,GN,
@@ -33,4 +33,4 @@ UOP,777,,GN,,,RD,RD,,,,,GN,
 Western Michigan,786,7,GN,GN,GN,GN,GN,GN,GN,BU,GN,GN,GN
 Puerto Rico,787,,GN,,,,YE,,RD,,GN,GN,GN
 App State,828,5,GN,GN,GN,GN,GN,GN,GN,GN,GN,GN,GN
-modified,2 Jul 2025 - 03:28PM Central Daylight Time,,,,,,,,,,,
+modified,2 Jul 2025 - 03:43PM Central Daylight Time,,,,,,,,,,,
