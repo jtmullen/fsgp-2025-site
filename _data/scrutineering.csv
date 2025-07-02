@@ -7,11 +7,11 @@ Berkeley,6,,GN,GN,YE,,YE,GN,RD,,GN,GN,GN
 UT Austin,8,,GN,,YE,,YE,GN,,,GN,GN,GN
 Iowa State,9,,,,,,,,,,,,
 RIT,10,,GN,,,RD,YE,,RD,,,GN,
-Northwestern,11,,,,,,YE,,,,,,
+Northwestern,11,,,,,,RD,,,,,,
 Michigan State,13,,GN,,,RD,RD,,RD,,,GN,GN
-Stanford,16,,GN,GN,GN,GN,YE,,,,,GN,
+Stanford,16,,GN,GN,GN,GN,GN,,,,,GN,
 Illinois State,17,,GN,,,RD,,,,,,,
-Washington,18,,GN,GN,,YE,,,,,GN,GN,GN
+Washington,18,,GN,GN,,YE,YE,,,,GN,GN,GN
 Virginia Tech,21,,GN,YE,,RD,RD,,YE,,,GN,GN
 Illinois,22,,GN,GN,YE,GN,YE,GN,YE,,,GN,
 Waterloo,24,,GN,GN,YE,YE,GN,GN,GN,GN,,GN,
@@ -20,17 +20,17 @@ Missouri S&T,42,,GN,,,,YE,BU,,,,GN,
 Georgia Tech,49,,GN,GN,GN,GN,GN,GN,YE,GN,GN,GN,
 Poly Montreal,55,1,GN,GN,BU,GN,GN,GN,GN,GN,GN,GN,GN
 SIUE,57,,GN,GN,,,,,,,,,
-Calgary,65,,GN,GN,YE,YE,,,BU,,,GN,
+Calgary,65,,GN,GN,YE,YE,YE,,BU,,,GN,
 Rutgers,66,,GN,,,,,,,,,GN,
-Toronto,77,,GN,,YE,,,,,,,GN,
+Toronto,77,,GN,,YE,,RD,,,,,GN,
 Florida Poly,79,2,GN,GN,GN,GN,GN,GN,BU,GN,GN,GN,GN
 Virginia,87,,GN,YE,,RD,YE,,RD,,,GN,GN
 UC Irvine,95,,GN,GN,,RD,RD,,,,,GN,GN
-Western Ontario,96,,GN,,,,,,,,,GN,
+Western Ontario,96,,GN,,,,RD,,,,,GN,
 McMaster,116,,,,,,,,,,,,
 Montana State,406,,GN,GN,GN,GN,YE,GN,BU,,GN,GN,GN
-UOP,777,,GN,,,,,,,,,GN,
+UOP,777,,GN,,,,RD,,,,,GN,
 Western Michigan,786,,GN,GN,GN,GN,GN,GN,GN,,,GN,GN
 Puerto Rico,787,,GN,,,,YE,,RD,,GN,GN,
 App State,828,,GN,GN,YE,YE,YE,YE,,,,GN,
-modified,2 Jul 2025 - 07:43AM Central Daylight Time,,,,,,,,,,,
+modified,2 Jul 2025 - 07:58AM Central Daylight Time,,,,,,,,,,,
