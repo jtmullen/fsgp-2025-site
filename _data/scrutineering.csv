@@ -9,7 +9,7 @@ Iowa State,9,,,,,,,,,,,GN,
 RIT,10,,GN,,,RD,YE,,RD,,,GN,
 Northwestern,11,,GN,,,,RD,,,,,,
 Michigan State,13,,GN,,,RD,RD,,RD,,,GN,GN
-Stanford,16,,GN,GN,GN,GN,GN,GN,,,,GN,
+Stanford,16,4,GN,GN,GN,GN,GN,GN,BU,GN,GN,GN,GN
 Illinois State,17,,GN,,,RD,,,,,,GN,
 Washington,18,,GN,GN,,BU,YE,,,,GN,GN,GN
 Virginia Tech,21,,GN,YE,,RD,RD,,YE,,,GN,GN
@@ -17,7 +17,7 @@ Illinois,22,,GN,GN,YE,GN,YE,GN,YE,,,GN,
 Waterloo,24,,GN,GN,GN,YE,GN,GN,GN,GN,GN,GN,
 British Columbia,26,,GN,GN,YE,GN,YE,GN,BU,,,GN,
 Missouri S&T,42,,GN,,,,YE,BU,,,,GN,
-Georgia Tech,49,,GN,GN,GN,GN,GN,GN,GN,GN,GN,GN,GN
+Georgia Tech,49,3,GN,GN,GN,GN,GN,GN,GN,GN,GN,GN,GN
 Poly Montreal,55,1,GN,GN,BU,GN,GN,GN,GN,GN,GN,GN,GN
 SIUE,57,,GN,GN,,,YE,,,,,GN,
 Calgary,65,,GN,GN,YE,YE,YE,,BU,,,GN,
@@ -32,5 +32,5 @@ Montana State,406,,GN,GN,GN,GN,YE,GN,BU,,GN,GN,GN
 UOP,777,,GN,,,,RD,,,,,GN,
 Western Michigan,786,,GN,GN,GN,GN,GN,GN,GN,,,GN,GN
 Puerto Rico,787,,GN,,,,YE,,RD,,GN,GN,
-App State,828,,GN,GN,GN,GN,GN,GN,GN,GN,,GN,
-modified,2 Jul 2025 - 12:43PM Central Daylight Time,,,,,,,,,,,
+App State,828,5,GN,GN,GN,GN,GN,GN,GN,GN,GN,GN,GN
+modified,2 Jul 2025 - 12:58PM Central Daylight Time,,,,,,,,,,,
