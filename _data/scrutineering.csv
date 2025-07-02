@@ -1,20 +1,20 @@
 team,number,order,1,2,3,4,5,6,7,8,9,10,11
 title,,,Driver Registration,Driver Operations,Lights & Vision,Body & Sizing,Electrical,Battery Protection,Mechanical,Dynamics,Solar Array,Safety,Impound/MOV
 Purdue,1,,GN,,,,,,RD,,,GN,
-Kentucky,3,,,,,,,,,,,GN,
+Kentucky,3,,GN,,,,,,,,,GN,
 Florida,5,,GN,GN,YE,YE,YE,,YE,,GN,GN,GN
-Berkeley,6,,GN,GN,YE,,YE,GN,RD,,GN,GN,GN
+Berkeley,6,,GN,GN,YE,,YE,GN,GN,,GN,GN,GN
 UT Austin,8,,GN,,YE,,YE,GN,,,GN,GN,GN
 Iowa State,9,,,,,,,,,,,,
 RIT,10,,GN,,,RD,YE,,RD,,,GN,
 Northwestern,11,,,,,,RD,,,,,,
 Michigan State,13,,GN,,,RD,RD,,RD,,,GN,GN
-Stanford,16,,GN,GN,GN,GN,GN,,,,,GN,
+Stanford,16,,GN,GN,GN,GN,GN,GN,,,,GN,
 Illinois State,17,,GN,,,RD,,,,,,,
 Washington,18,,GN,GN,,BU,YE,,,,GN,GN,GN
 Virginia Tech,21,,GN,YE,,RD,RD,,YE,,,GN,GN
 Illinois,22,,GN,GN,YE,GN,YE,GN,YE,,,GN,
-Waterloo,24,,GN,GN,YE,YE,GN,GN,GN,GN,,GN,
+Waterloo,24,,GN,GN,GN,YE,GN,GN,GN,GN,GN,GN,
 British Columbia,26,,GN,GN,YE,GN,YE,GN,BU,,,GN,
 Missouri S&T,42,,GN,,,,YE,BU,,,,GN,
 Georgia Tech,49,,GN,GN,GN,GN,GN,GN,GN,GN,GN,GN,
@@ -32,5 +32,5 @@ Montana State,406,,GN,GN,GN,GN,YE,GN,BU,,GN,GN,GN
 UOP,777,,GN,,,,RD,,,,,GN,
 Western Michigan,786,,GN,GN,GN,GN,GN,GN,GN,,,GN,GN
 Puerto Rico,787,,GN,,,,YE,,RD,,GN,GN,
-App State,828,,GN,GN,YE,YE,YE,YE,,,,GN,
-modified,2 Jul 2025 - 09:58AM Central Daylight Time,,,,,,,,,,,
+App State,828,,GN,GN,YE,YE,YE,YE,YE,GN,,GN,
+modified,2 Jul 2025 - 10:13AM Central Daylight Time,,,,,,,,,,,
