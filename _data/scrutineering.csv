@@ -2,7 +2,7 @@ team,number,order,1,2,3,4,5,6,7,8,9,10,11
 title,,,Driver Registration,Driver Operations,Lights & Vision,Body & Sizing,Electrical,Battery Protection,Mechanical,Dynamics,Solar Array,Safety,Impound/MOV
 Purdue,1,,GN,GN,,YE,,,YE,,GN,GN,
 Kentucky,3,,GN,,,,YE,,RD,,GN,GN,
-Florida,5,,GN,GN,GN,BU,YE,RD,YE,,GN,GN,GN
+Florida,5,,GN,GN,GN,BU,YE,GN,YE,,GN,GN,GN
 Berkeley,6,8,GN,GN,GN,GN,GN,GN,GN,GN,GN,GN,GN
 UT Austin,8,,GN,GN,YE,,YE,GN,GN,,GN,GN,GN
 Iowa State,9,,,,,,RD,,,,,GN,
@@ -10,8 +10,8 @@ RIT,10,,GN,,,RD,YE,,YE,,GN,GN,
 Northwestern,11,,GN,,,RD,RD,RD,RD,,GN,,
 Michigan State,13,,GN,GN,YE,RD,RD,,RD,,GN,GN,GN
 Stanford,16,4,GN,GN,GN,GN,GN,GN,BU,GN,GN,GN,GN
-Illinois State,17,,GN,,YE,YE,YE,,RD,,GN,GN,
-Washington,18,,GN,GN,,BU,YE,GN,YE,,GN,GN,GN
+Illinois State,17,,GN,,YE,YE,YE,GN,RD,,GN,GN,GN
+Washington,18,,GN,GN,YE,BU,YE,GN,YE,,GN,GN,GN
 Virginia Tech,21,,GN,GN,YE,GN,GN,GN,BU,,GN,GN,GN
 Illinois,22,,GN,GN,YE,GN,YE,GN,GN,GN,GN,GN,GN
 Waterloo,24,6,GN,GN,GN,BU,GN,GN,GN,GN,GN,GN,BU
@@ -22,7 +22,7 @@ Poly Montreal,55,1,GN,GN,BU,GN,GN,GN,GN,GN,GN,GN,GN
 SIUE,57,,GN,GN,YE,GN,YE,YE,GN,,GN,GN,GN
 Calgary,65,,GN,GN,YE,YE,YE,,BU,,GN,GN,
 Rutgers,66,,GN,,,RD,RD,,,,GN,GN,
-Toronto,77,,GN,,YE,GN,YE,,YE,,GN,GN,
+Toronto,77,,GN,,YE,GN,YE,YE,YE,,GN,GN,
 Florida Poly,79,2,GN,GN,GN,GN,GN,GN,BU,GN,GN,GN,GN
 Virginia,87,,GN,YE,YE,GN,YE,GN,YE,,GN,GN,GN
 UC Irvine,95,,GN,GN,,RD,RD,,YE,,GN,GN,GN
@@ -33,4 +33,4 @@ UOP,777,,GN,,,RD,RD,,,,GN,GN,
 Western Michigan,786,7,GN,GN,GN,GN,GN,GN,GN,BU,GN,GN,GN
 Puerto Rico,787,,GN,GN,,BU,YE,,YE,,GN,GN,GN
 App State,828,5,GN,GN,GN,GN,GN,GN,GN,GN,GN,GN,GN
-modified,2 Jul 2025 - 08:13PM Central Daylight Time,,,,,,,,,,,
+modified,2 Jul 2025 - 08:28PM Central Daylight Time,,,,,,,,,,,
