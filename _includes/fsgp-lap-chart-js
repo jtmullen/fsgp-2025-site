@@ -4,8 +4,8 @@ FSGP Lap Chart JS
 {%- assign class = include.class -%}
 {%if class != "sov" and class != "mov" -%} <i>Error generating Chart</i>
 {%- else -%}
-{%- assign colors = "#4aabed,#ff6384,#ff9f40,#ffcd56,#4bc0c0,#9966ff,#c9cbcf,#4aabed,#ff6384,#ff9f40,#ffcd56,#4bc0c0,#9966ff,#c9cbcf,#4aabed,#ff6384,#ff9f40,#ffcd56,#4bc0c0,#9966ff,#c9cbcf" | split: "," -%}
-{%- assign fillcolors = "#99cff4,#feb0c0,#fece9e,#fee5a9,#a4dede,#cbb1fe,#e3e4e6,#99cff4,#feb0c0,#fece9e,#fee5a9,#a4dede,#cbb1fe,#e3e4e6,#99cff4,#feb0c0,#fece9e,#fee5a9,#a4dede,#cbb1fe,#e3e4e6" | split: "," -%}
+{%- assign colors = "#4aabed,#ff6384,#ff9f40,#ffcd56,#4bc0c0,#9966ff,#c9cbcf,#4aabed,#ff6384,#ff9f40,#ffcd56,#4bc0c0,#9966ff,#c9cbcf,#4aabed,#ff6384,#ff9f40,#ffcd56,#4bc0c0,#9966ff,#c9cbcf,#4aabed,#ff6384,#ff9f40,#ffcd56,#4bc0c0,#9966ff,#c9cbcf" | split: "," -%}
+{%- assign fillcolors = "#99cff4,#feb0c0,#fece9e,#fee5a9,#a4dede,#cbb1fe,#e3e4e6,#99cff4,#feb0c0,#fece9e,#fee5a9,#a4dede,#cbb1fe,#e3e4e6,#99cff4,#feb0c0,#fece9e,#fee5a9,#a4dede,#cbb1fe,#e3e4e6,#99cff4,#feb0c0,#fece9e,#fee5a9,#a4dede,#cbb1fe,#e3e4e6" | split: "," -%}
 {%- assign teams = site.data.fsgp.[class] -%}
 {%- assign sorted_teams = teams | sort: "number" -%}
 {%- assign team_count = 0 -%}
