@@ -6,7 +6,7 @@ title: "Follow Along"
 
 ## _In Person_
 
-Spectators are invited to attend Electrek FSGP 2025 for free! Come see the solar cars complete laps on the track or check them out up close during evening charging periods. [Concessions](https://www.americansolarchallenge.org/ASC/wp-content/uploads/2025/03/2025_FSGP_NCM_Concession_Menu.pdf) will be available 11-2. The best times to attend for spectators are: 
+Spectators are invited to attend Electrek FSGP 2025 for free! Come see the solar cars complete laps on the track or check them out up close during evening charging periods. [Concessions](https://www.americansolarchallenge.org/ASC/wp-content/uploads/2025/03/2025_FSGP_NCM_Concession_Menu.pdf) will be available 11-2. [A Facility Map is Available](https://www.americansolarchallenge.org/ASC/wp-content/uploads/2025/07/Electrek-FSGP2025-NCM-MSP-Facility-Map-v6.pdf). The best times to attend for spectators are: 
   <div class="responsive-grid">
     <div class="responsive-column">
       <p><b>Thursday July 3rd</b></p>
