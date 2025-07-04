@@ -1,2 +1,7 @@
-team,number,miles,person,penalty,speed,capacity,external,completion,derate,total-ext,score
-modified,25 Jun 2025 - 09:41PM Central Daylight Time,,,,,,,,,,
+team,number,miles,person,penalty,speed,capacity,external,completion,derate,total–ext,score
+Poly Montreal,55,248.85,497.70,0.00,33.20,9.22,0.00,100.00,1.00,9.22,54.00
+App State,828,242.55,485.10,0.00,30.91,22.19,0.00,97.47,1.00,22.19,21.31
+Georgia Tech,49,22.05,88.20,0.00,30.50,14.31,0.00,8.86,1.00,14.31,0.55
+Western Ontario,96,0.00,0.00,0.00,,,0.00,0.00,1.00,,0.00
+McMaster,116,0.00,0.00,0.00,,,0.00,0.00,1.00,,0.00
+modified,3 Jul 2025 - 07:34PM Central Daylight Time,,,,,,,,,,
