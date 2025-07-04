@@ -33,7 +33,7 @@ FSGP MOV Score Table Generator
                 <td class="fsgp-td fsgp-td-main-right-border fsgp-td-score"><b>{{team.score}}</b></td>
                 <td class="fsgp-td">{{team.completion}}%</td>
                 <td class="fsgp-td">{{team.derate}}</td>
-                <td class="fsgp-td fsgp-td-main-right-border">{{team.total-ext}}</td>
+                <td class="fsgp-td fsgp-td-main-right-border">{{team.totalext}}</td>
                 <td class="fsgp-td">{{team.miles}}</td>
                 <td class="fsgp-td">{{team.person}}</td>
                 <td class="fsgp-td">{{team.penalty}}</td>
