@@ -74,7 +74,7 @@ FSGP Lap Chart JS
 	  labels: labels_score,
 	  datasets: [
 	  {
-		data: [{{ person_mi_sanitized | times: 100 | divided_by: max_personmi }}, {{team.completion}}, {{team.derate | times: 100}}, {{min_external | times: 100 | divided_by: team.total-ext}}],
+		data: [{{ person_mi_sanitized | times: 100 | divided_by: max_personmi }}, {{team.completion}}, {{team.derate | times: 100}}, {% if team.total-ext > 0%}{{min_external | times: 100 | divided_by: team.total-ext}}{% else %} 0 {% endif %}],
 		backgroundColor: [
 			"#EE4B2B7F","#FFAC1C7F","#FFEA007F","#00FFFF7F" 
 		]
