@@ -1,18 +1,18 @@
 team,number,penalty,fastest,total,1,2,3
 labels,,graph,,,Day 1,Day 2,Day 3
 labels,,table,,,Day 1,Day 2,Day 3
-Illinois,22,0,4:44,193,67,72,54
-Washington,18,8,4:24,113,0,69,52
-Illinois State,17,0,4:32,83,,31,52
-Stanford,16,4,4:44,188,71,72,49
-Florida,5,2,4:23,124,28,53,45
-Florida Poly,79,0,5:58,162,51,70,41
-Western Michigan,786,4,5:19,143,56,53,38
-Virginia Tech,21,0,6:49,57,,29,28
+Illinois,22,0,4:44,203,67,72,64
+Washington,18,8,4:24,123,0,69,62
+Illinois State,17,0,4:32,91,,31,60
+Stanford,16,4,4:44,198,71,72,59
+Florida,5,2,4:23,132,28,53,53
+Florida Poly,79,0,5:58,169,51,70,48
+Western Michigan,786,4,5:19,149,56,53,44
+Virginia Tech,21,0,6:32,65,,29,36
 Berkeley,6,0,4:49,117,65,32,20
+Missouri S&T,42,8,5:41,20,,12,16
 Waterloo,24,2,7:05,47,24,10,15
-Missouri S&T,42,8,5:41,17,,12,13
-Montana State,406,6,5:58,19,0,14,11
+Montana State,406,6,5:58,22,0,14,14
 British Columbia,26,0,5:56,5,0,0,5
 UT Austin,8,3,6:58,4,,3,4
 SIUE,57,1,7:44,3,,1,3
@@ -27,4 +27,4 @@ Virginia*,87,0,-,0,,,
 UC Irvine*,95,0,-,0,,,
 UOP*,777,0,-,0,,,
 Puerto Rico*,787,0,-,0,,,
-modified,,5 Jul 2025 - 02:05PM Central Daylight Time,,,,,
+modified,,5 Jul 2025 - 03:04PM Central Daylight Time,,,,,
