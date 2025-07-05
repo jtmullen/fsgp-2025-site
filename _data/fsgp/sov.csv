@@ -1,17 +1,17 @@
 team,number,penalty,fastest,total,1,2,3
 labels,,graph,,,Day 1,Day 2,Day 3
 labels,,table,,,Day 1,Day 2,Day 3
-Illinois,22,0,4:44,213,67,72,74
-Washington,18,8,4:24,134,0,69,73
-Illinois State,17,0,4:32,102,,31,71
-Stanford,16,4,4:44,205,71,72,66
-Florida,5,2,4:23,139,28,53,60
+Illinois,22,0,4:44,217,67,72,78
+Washington,18,8,4:24,138,0,69,77
+Illinois State,17,0,4:32,106,,31,75
+Stanford,16,4,4:44,209,71,72,70
+Florida,5,2,4:23,142,28,53,63
 Florida Poly,79,0,5:58,173,51,70,52
-Western Michigan,786,4,5:19,156,56,53,51
-Virginia Tech,21,0,6:32,73,,29,44
+Western Michigan,786,4,5:19,157,56,53,52
+Virginia Tech,21,0,5:08,78,,29,49
 Waterloo,24,2,5:25,54,24,10,22
 Berkeley,6,0,4:49,117,65,32,20
-Missouri S&T,42,8,5:41,20,,12,16
+Missouri S&T,42,8,5:41,21,,12,17
 Montana State,406,6,5:58,24,0,14,16
 British Columbia,26,0,5:56,5,0,0,5
 UT Austin,8,3,6:58,4,,3,4
@@ -27,4 +27,4 @@ Virginia*,87,0,-,0,,,
 UC Irvine*,95,0,-,0,,,
 UOP*,777,0,-,0,,,
 Puerto Rico*,787,0,-,0,,,
-modified,,5 Jul 2025 - 04:05PM Central Daylight Time,,,,,
+modified,,5 Jul 2025 - 04:36PM Central Daylight Time,,,,,
