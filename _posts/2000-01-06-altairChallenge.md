@@ -15,7 +15,7 @@ title: "Altair Challenge"
                 The Altair Challenge returned to FSGP 2025! Participating teams worked over 3 days to design the best FSGP compliant roll cage for the provided chassis. 
 
                  <ul>
-                <li><b>Grand Prize ($10,000): British Columbia</li>
+                <li><b>Grand Prize ($10,000): British Columbia</b></li>
                 <li>Second:  Florida</li>
                 <li>Third:  McMaster</li>
                 <li>Judges Choice Lightest:  Purdue</li>
